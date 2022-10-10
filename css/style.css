@@ -1,5 +1,5 @@
 *{
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.1em;
     color: white;
 }
@@ -9,7 +9,6 @@ body{
 }
 
 a{
-    color: black;
     font-size: 0.9em;
     text-decoration: none;
     margin-left: 20px;
@@ -24,8 +23,8 @@ nav a:hover{
 }
 
 ul a:hover{
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: gold;
 }
 
 article{
@@ -38,7 +37,7 @@ p{
     font-weight: bolder;
     margin-left: 5px;
     margin-bottom: 10px;
-    color: tomato;
+    color: #fb2576;
 }
 
 ul{
@@ -56,14 +55,14 @@ li{
 }
 
 .texto_de_contenido{
-    color: rgb(33, 33, 163);
+    color: white;
     padding: 10px;
     text-align: justify;
 }
 
 .subtitulo{
     text-align: center;
-    color: blueviolet;
+    color: white;
     margin-top: 10px;
     font-size: 1.6em;
     font-style: italic;
@@ -84,7 +83,7 @@ li{
 
 header {
     grid-area: header;
-    background-color: #68A7AD;
+    background-color: #000000;
     font-size: 2em;
     font-weight: 400;
     padding: 20px;
@@ -92,21 +91,22 @@ header {
 
 nav {
     grid-area: nav;
-    background-color: #99C4C8;
+    background-color: #150050;
+    color: white;
 }
 
 aside {
     grid-area: aside;
-    background-color: #ecdbbe;
+    background-color: #3f0071;
 }
 
 main {
     grid-area: main;
-    background-color: #f0ebce;
+    background-color: #3f0071;
 }
 
 footer {
-    background-color: #68A7AD;
+    background-color: #fb2576;
     grid-area: footer;
     text-align: center;
     font-size: 0.8em;
@@ -158,6 +158,10 @@ footer a:hover{
     display: grid;
     gap: 5px;
     max-width: 1200px;
+}
+
+.gold{
+    color: gold;
 }
 
 /* BREAKPOINTS DE PANTALLA */

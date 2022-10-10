@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head id="idhead"></head>
+<head id="idhead">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Témpano helados</title>
+</head>
 
 <body>
     <section class="container">
@@ -11,25 +24,26 @@
             <br>
             <img src="images/old-typical-phone.png" class="animate__animated animate__shakeX icons">
             <p>Palermo</p>
-            <span>258-4001-5588</span><br>
+            <span class="gold">258-4001-5588</span><br><br>
             <p>Caballito </p>
-            <span>112-2587-0011</span>
+            <span class="gold">112-2587-0011</span>
         </aside>
         <main class="item">
             <p>Formulario de contacto</p>
             <div class="form">
                 <form name="form_contacto" action="gracias.html">
                     <div class="input">
-                        <label for="email">email de respuesta</label><br>
+                        <label class="gold" for="email">email de respuesta</label><br>
                         <input type="email" name="email" placeholder="ejemplo@hotmail.com" required>
                     </div>
                     <div class="input">
-                        <label for="nombre">tu nombre</label><br>
+                        <label class="gold" for="nombre">tu nombre</label><br>
                         <input type="text" name="nombre" placeholder="nombre" maxlength="60" required>
                     </div>
                     <div class="input">
-                        <label for="consulta">tu consulta</label><br>
-                        <textarea name="consulta" id="consulta" rows="7" cols="30" placeholder="deseo saber..."></textarea>
+                        <label class="gold" for="consulta">tu consulta</label><br>
+                        <textarea name="consulta" id="consulta" rows="7" cols="30"
+                            placeholder="deseo saber..."></textarea>
                     </div>
                     <div class="input text-centrado">
                         <input type="button" value="enviar consulta" onclick="validar()">
