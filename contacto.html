@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    
+
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,6 +29,7 @@
             <span class="gold">112-2587-0011</span>
         </aside>
         <main class="item">
+            <h2>Hacé tu consulta, te responderemos a la brevedad!</h2>
             <p>Formulario de contacto</p>
             <div class="form">
                 <form name="form_contacto" action="gracias.html">
@@ -50,6 +51,42 @@
                     </div>
 
                 </form>
+            </div>
+
+            <div id="opiniones">
+                <h2>Opiniones de nuestros clientes! (Simulación para uso de API)</h2>
+                <div id="mensajes" class="opiniones"></div>
+
+
+                <script>
+                    let contenedor = document.getElementById('mensajes')
+                    let userId
+                    
+                    const opinion = (id) => {
+                        fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
+                            .then(res => {
+                                return res.json()
+                            })
+                            .then(mensaje => {
+                                userId = mensaje.userId
+                                fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
+                                    .then(res_user => {
+                                        return res_user.json()
+                                    })
+                                    .then(usuario => {
+                                        contenedor.innerHTML = contenedor.innerHTML + 'usuario: ' +
+                                            usuario.name + '<br>mensaje: ' + mensaje.id + ' - ' + 
+                                            mensaje.title + '<hr><br>'
+                                    })
+                            })
+
+                    }
+                    opinion(2) //user 1
+                    opinion(23) //2
+                    opinion(45) //3
+                    opinion(46) //3
+                    opinion(61) //4
+                </script>
             </div>
 
         </main>
